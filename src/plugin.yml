@@ -1,0 +1,18 @@
+name: SlashPing
+main: com.battleasya.SlashPing
+version: 1.0.0
+author: Dennie
+website: http://battleasya.com
+description: A simple ping plugin.
+commands:
+  ping:
+    description: Ping yourself.
+  pingreload:
+    description: Ping someone.
+permissions:
+  ping.*:
+    default: op
+    children:
+      ping.self: true
+      ping.others: true
+      ping.reload: true
