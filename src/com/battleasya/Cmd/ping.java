@@ -7,8 +7,11 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+// import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public class ping implements CommandExecutor {
 
@@ -17,6 +20,9 @@ public class ping implements CommandExecutor {
     public ping(SlashPing plugin) {
         this.plugin = plugin;
     }
+
+    private static Method getHandleMethod;
+    private static Field pingField;
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -29,8 +35,9 @@ public class ping implements CommandExecutor {
 
             if (args.length == 0) {
                 if (sender.hasPermission("ping.self")) {
-                    Player p = (Player) sender;
-                    int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
+                    Player p = Bukkit.getPlayer(sender.getName());
+                    //int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
+                    int ping = (int) (getPing(p) * plugin.config.pingOffset);
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.pingSelf.replaceAll("%ping%", String.valueOf(ping))));
                 } else {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.noPermission));
@@ -42,7 +49,8 @@ public class ping implements CommandExecutor {
                 if (sender.hasPermission("ping.others")) {
                     Player p = Bukkit.getPlayer(args[0]);
                     if (p != null && !VanishAPI.isInvisible(p)) {
-                        int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
+                        //int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
+                        int ping = (int) (getPing(p) * plugin.config.pingOffset);
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.pingOthers.replaceAll("%name%", args[0]).replaceAll("%ping%", String.valueOf(ping))));
                         return true;
                     }
@@ -59,6 +67,30 @@ public class ping implements CommandExecutor {
             return true;
         }
 
+    }
+
+    /* https://www.spigotmc.org/threads/get-player-ping-with-reflection.147773/ */
+    public static int getPing(Player p) {
+
+        try {
+
+            if (getHandleMethod == null) {
+                getHandleMethod = p.getClass().getDeclaredMethod("getHandle");
+                getHandleMethod.setAccessible(true);
+            }
+
+            Object entityPlayer = getHandleMethod.invoke(p);
+
+            if (pingField == null) {
+                pingField = entityPlayer.getClass().getDeclaredField("ping");
+                pingField.setAccessible(true);
+            }
+
+            return pingField.getInt(entityPlayer);
+
+        } catch (Exception e) {
+            return 0;
+        }
     }
 
 }
