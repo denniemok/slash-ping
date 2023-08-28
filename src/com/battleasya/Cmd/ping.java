@@ -36,7 +36,7 @@ public class ping implements CommandExecutor {
             if (args.length == 0) {
                 if (sender.hasPermission("ping.self")) {
                     Player p = Bukkit.getPlayer(sender.getName());
-                    //int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
+                    // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
                     int ping = (int) (getPing(p) * plugin.config.pingOffset);
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.pingSelf.replaceAll("%ping%", String.valueOf(ping))));
                 } else {
@@ -49,7 +49,7 @@ public class ping implements CommandExecutor {
                 if (sender.hasPermission("ping.others")) {
                     Player p = Bukkit.getPlayer(args[0]);
                     if (p != null && !VanishAPI.isInvisible(p)) {
-                        //int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
+                        // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
                         int ping = (int) (getPing(p) * plugin.config.pingOffset);
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.pingOthers.replaceAll("%name%", args[0]).replaceAll("%ping%", String.valueOf(ping))));
                         return true;
@@ -70,6 +70,7 @@ public class ping implements CommandExecutor {
     }
 
     /* https://www.spigotmc.org/threads/get-player-ping-with-reflection.147773/ */
+    /* credits to konsolas for the lazily loaded system */
     public static int getPing(Player p) {
 
         try {
