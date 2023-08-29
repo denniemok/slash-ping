@@ -15,7 +15,7 @@ public class Config {
 
     public String pingOthers;
 
-    public double pingOffset;
+    public double pingMultiplier;
 
     public String pingSyntax;
 
@@ -29,7 +29,7 @@ public class Config {
 
         pingSelf = config.getString("ping-self");
         pingOthers = config.getString("ping-others");
-        pingOffset = config.getDouble("ping-offset");
+        pingMultiplier = config.getDouble("ping-multiplier");
         pingSyntax = config.getString("ping-syntax");
         reloadConfig = config.getString("reload-config");
         noPermission = config.getString("no-permission");
