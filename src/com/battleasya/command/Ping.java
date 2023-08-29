@@ -1,7 +1,7 @@
-package com.battleasya.Cmd;
+package com.battleasya.command;
 
 import com.battleasya.SlashPing;
-import com.battleasya.Hdlr.Util;
+import com.battleasya.handler.Util;
 import de.myzelyam.api.vanish.VanishAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -62,7 +62,7 @@ public class Ping implements CommandExecutor {
                     // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
                     int ping = (int) (getPing(p) * plugin.config.pingMultiplier);
                     Util.sendMessage(sender,  plugin.config.pingOthers
-                            .replaceAll("%name%", args[0])
+                            .replaceAll("%name%", p.getName())
                             .replaceAll("%ping%", String.valueOf(ping)));
                     return true;
                 }
