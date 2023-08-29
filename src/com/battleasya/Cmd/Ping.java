@@ -1,7 +1,7 @@
 package com.battleasya.Cmd;
 
 import com.battleasya.SlashPing;
-import com.battleasya.Util.Util;
+import com.battleasya.Hdlr.Util;
 import de.myzelyam.api.vanish.VanishAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;

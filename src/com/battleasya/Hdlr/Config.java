@@ -1,4 +1,4 @@
-package com.battleasya.Util;
+package com.battleasya.Hdlr;
 
 import com.battleasya.SlashPing;
 import org.bukkit.configuration.file.FileConfiguration;

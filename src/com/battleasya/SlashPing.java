@@ -2,7 +2,7 @@ package com.battleasya;
 
 import com.battleasya.Cmd.Ping;
 import com.battleasya.Cmd.Reload;
-import com.battleasya.Util.Config;
+import com.battleasya.Hdlr.Config;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SlashPing extends JavaPlugin {
