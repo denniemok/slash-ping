@@ -15,7 +15,7 @@
 <hr>
 
 ### Introduction
-This is a minimalist plugin with exactly one function: /ping. Nothing fancy or complicated is involved. It only does the simplest task you ask for: /ping, and hence the performance. <br>
+This is a minimalist plugin with exactly one function: /ping. Nothing fancy or complicated is involved. It only does the simplest task you ask for, and hence the performance. <br>
 
 <hr>
 
