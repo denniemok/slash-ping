@@ -1,5 +1,6 @@
-package com.battleasya;
+package com.battleasya.Util;
 
+import com.battleasya.SlashPing;
 import org.bukkit.configuration.file.FileConfiguration;
 
 public class Config {

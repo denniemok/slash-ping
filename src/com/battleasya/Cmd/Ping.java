@@ -13,11 +13,11 @@ import org.bukkit.entity.Player;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-public class ping implements CommandExecutor {
+public class Ping implements CommandExecutor {
 
     private final SlashPing plugin;
 
-    public ping(SlashPing plugin) {
+    public Ping(SlashPing plugin) {
         this.plugin = plugin;
     }
 

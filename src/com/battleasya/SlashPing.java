@@ -1,7 +1,8 @@
 package com.battleasya;
 
-import com.battleasya.Cmd.ping;
-import com.battleasya.Cmd.pingreload;
+import com.battleasya.Cmd.Ping;
+import com.battleasya.Cmd.Reload;
+import com.battleasya.Util.Config;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SlashPing extends JavaPlugin {
@@ -16,8 +17,8 @@ public class SlashPing extends JavaPlugin {
         config = new Config(this);
         config.fetchConfig();
 
-        getCommand("ping").setExecutor(new ping(this));
-        getCommand("pingreload").setExecutor(new pingreload(this));
+        getCommand("ping").setExecutor(new Ping(this));
+        getCommand("pingreload").setExecutor(new Reload(this));
 
     }
 

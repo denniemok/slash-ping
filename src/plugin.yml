@@ -1,9 +1,10 @@
 name: SlashPing
 main: com.battleasya.SlashPing
-version: 1.0.0
+version: 1.0.1
 author: Dennie
 website: http://battleasya.com
-description: A simple ping plugin.
+description: Minimalist Ping Plugin
+depend: [PremiumVanish]
 commands:
   ping:
     description: Ping yourself.
