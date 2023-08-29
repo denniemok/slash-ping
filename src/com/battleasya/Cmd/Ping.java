@@ -7,7 +7,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-// import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+// DEPRECATED: import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Field;
@@ -35,11 +35,15 @@ public class Ping implements CommandExecutor {
         if (args.length == 0) {
 
             if (sender.hasPermission("ping.self")) {
+
                 Player p = Bukkit.getPlayer(sender.getName());
+
                 // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
                 int ping = (int) (getPing(p) * plugin.config.pingMultiplier);
+
                 Util.sendMessage(sender, plugin.config.pingSelf
                         .replaceAll("%ping%", String.valueOf(ping)));
+
             } else {
                 Util.sendMessage(sender,  plugin.config.noPermission);
             }
@@ -51,7 +55,9 @@ public class Ping implements CommandExecutor {
         if (args.length == 1) {
 
             if (sender.hasPermission("ping.others")) {
+
                 Player p = Bukkit.getPlayer(args[0]);
+
                 if (p != null && !p.hasPermission("ping.exempt")) { // && !VanishAPI.isInvisible(p)
                     // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
                     int ping = (int) (getPing(p) * plugin.config.pingMultiplier);
@@ -60,6 +66,7 @@ public class Ping implements CommandExecutor {
                             .replaceAll("%ping%", String.valueOf(ping)));
                     return true;
                 }
+
             } else {
                 Util.sendMessage(sender,  plugin.config.noPermission);
                 return true;
