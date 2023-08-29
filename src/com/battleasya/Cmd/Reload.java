@@ -6,11 +6,11 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class pingreload implements CommandExecutor {
+public class Reload implements CommandExecutor {
 
     private final SlashPing plugin;
 
-    public pingreload(SlashPing plugin) {
+    public Reload(SlashPing plugin) {
         this.plugin = plugin;
     }
 
