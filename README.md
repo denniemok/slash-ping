@@ -1,4 +1,3 @@
-<br>
 <h3 align="center">Slash Ping</h3>
 <p align="center">A minimalist ping plugin.</p>
 
@@ -10,7 +9,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/Version-1.0.1-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
-</p><br>
+</p>
 
 <hr>
 
