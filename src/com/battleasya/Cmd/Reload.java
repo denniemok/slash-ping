@@ -1,6 +1,7 @@
 package com.battleasya.Cmd;
 
 import com.battleasya.SlashPing;
+import com.battleasya.Util.Util;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -20,9 +21,9 @@ public class Reload implements CommandExecutor {
         if (sender.hasPermission("ping.reload")) {
             plugin.reloadConfig();
             plugin.config.fetchConfig();
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.reloadConfig));
+            Util.sendMessage(sender,  plugin.config.reloadConfig);
         } else {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.noPermission));
+            Util.sendMessage(sender,  plugin.config.noPermission);
         }
 
         return true;
