@@ -4,6 +4,7 @@ version: 1.0.1
 author: Dennie
 website: http://battleasya.com
 description: Minimalist Ping Plugin
+softdepend: [SuperVanish, PremiumVanish]
 commands:
   ping:
     description: Ping yourself.
