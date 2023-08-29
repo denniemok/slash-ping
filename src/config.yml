@@ -1,6 +1,10 @@
+# Slash Ping
+
 ping-self: "&6Your ping is &c%ping% &6ms."
 ping-others: "&c%name%&6's ping is &c%ping% &6ms."
-ping-offset: 0.8
-ping-syntax: "&8(&4&l!&8) &6Syntax: /ping [name]"
-reload-config: "&8(&4&l!&8) &6Config Reloaded."
+ping-multiplier: 0.8
+
+ping-syntax: "&cSyntax: /ping [name]"
 no-permission: "&8(&4&l!&8) &6Unknown Command."
+
+reload-config: "&6SlashPing Config Reloaded."
