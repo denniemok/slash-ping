@@ -1,9 +1,9 @@
 package com.battleasya.Cmd;
 
 import com.battleasya.SlashPing;
-import de.myzelyam.api.vanish.VanishAPI;
+import com.battleasya.Util.Util;
+// import de.myzelyam.api.vanish.VanishAPI;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -22,6 +22,7 @@ public class Ping implements CommandExecutor {
     }
 
     private static Method getHandleMethod;
+
     private static Field pingField;
 
     @Override
@@ -31,41 +32,43 @@ public class Ping implements CommandExecutor {
             return true;
         }
 
-        try {
+        if (args.length == 0) {
 
-            if (args.length == 0) {
-                if (sender.hasPermission("ping.self")) {
-                    Player p = Bukkit.getPlayer(sender.getName());
+            if (sender.hasPermission("ping.self")) {
+                Player p = Bukkit.getPlayer(sender.getName());
+                // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
+                int ping = (int) (getPing(p) * plugin.config.pingMultiplier);
+                Util.sendMessage(sender, plugin.config.pingSelf
+                        .replaceAll("%ping%", String.valueOf(ping)));
+            } else {
+                Util.sendMessage(sender,  plugin.config.noPermission);
+            }
+
+            return true;
+
+        }
+
+        if (args.length == 1) {
+
+            if (sender.hasPermission("ping.others")) {
+                Player p = Bukkit.getPlayer(args[0]);
+                if (p != null && !p.hasPermission("ping.exempt")) { // && !VanishAPI.isInvisible(p)
                     // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
-                    int ping = (int) (getPing(p) * plugin.config.pingOffset);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.pingSelf.replaceAll("%ping%", String.valueOf(ping))));
-                } else {
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.noPermission));
+                    int ping = (int) (getPing(p) * plugin.config.pingMultiplier);
+                    Util.sendMessage(sender,  plugin.config.pingOthers
+                            .replaceAll("%name%", args[0])
+                            .replaceAll("%ping%", String.valueOf(ping)));
+                    return true;
                 }
+            } else {
+                Util.sendMessage(sender,  plugin.config.noPermission);
                 return true;
             }
 
-            if (args.length == 1) {
-                if (sender.hasPermission("ping.others")) {
-                    Player p = Bukkit.getPlayer(args[0]);
-                    if (p != null && !VanishAPI.isInvisible(p)) {
-                        // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
-                        int ping = (int) (getPing(p) * plugin.config.pingOffset);
-                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.pingOthers.replaceAll("%name%", args[0]).replaceAll("%ping%", String.valueOf(ping))));
-                        return true;
-                    }
-                } else {
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.noPermission));
-                    return true;
-                }
-            }
-
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.config.pingSyntax));
-            return true;
-
-        } catch (Exception e) {
-            return true;
         }
+
+        Util.sendMessage(sender,  plugin.config.pingSyntax);
+        return true;
 
     }
 
@@ -92,6 +95,7 @@ public class Ping implements CommandExecutor {
         } catch (Exception e) {
             return 0;
         }
+
     }
 
 }
