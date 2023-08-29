@@ -2,7 +2,6 @@ package com.battleasya.Cmd;
 
 import com.battleasya.SlashPing;
 import com.battleasya.Util.Util;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
