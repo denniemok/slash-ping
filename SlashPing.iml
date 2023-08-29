@@ -21,7 +21,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/PremiumVanish-2.5.14.jar!/" />
+          <root url="jar://$MODULE_DIR$/../lib/SuperVanish.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
