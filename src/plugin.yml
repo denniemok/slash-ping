@@ -17,3 +17,4 @@ permissions:
       ping.self: true
       ping.others: true
       ping.reload: true
+      ping.exempt: true
