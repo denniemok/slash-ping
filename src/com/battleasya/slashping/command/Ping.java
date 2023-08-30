@@ -91,9 +91,29 @@ public class Ping implements CommandExecutor {
 
     }
 
-    /* https://www.spigotmc.org/threads/get-player-ping-with-reflection.147773/ */
-    /* credits to konsolas for the lazily loaded system */
     public int getPing(Player p) {
+
+        switch (plugin.version) {
+            case 1:
+                return getPingLegacy(p);
+            case 2:
+                return getPingModern(p);
+            default: /* unknown = 0 */
+                int legacyResult = getPingLegacy(p); /* try legacy first */
+                if (legacyResult == -1) {
+                    plugin.version = 2;
+                    return getPingModern(p);
+                } else {
+                    plugin.version = 1;
+                    return legacyResult;
+                }
+        }
+
+    }
+
+    /* https://www.spigotmc.org/threads/get-player-ping-with-reflection.147773/ */
+    /* credits to konsolas for the reflection system */
+    public int getPingLegacy(Player p) {
 
         try {
 
@@ -109,17 +129,31 @@ public class Ping implements CommandExecutor {
                 pingField.setAccessible(true);
             }
 
-            return (int) (pingField.getInt(entityPlayer) * plugin.config.pingMultiplier + plugin.config.pingOffset);
+            int ping = (int) (pingField.getInt(entityPlayer)
+                    * plugin.config.pingMultiplier + plugin.config.pingOffset);
+
+            return Math.max(ping, 0); /* greater of the 2 values */
 
         } catch (Exception e) {
 
-            try {
-                return (int) (p.getPing() * plugin.config.pingMultiplier + plugin.config.pingOffset);
-            } catch (Exception e2) {
-                return -1;
-            }
+            return -1;
 
-            // return -1;
+        }
+
+    }
+
+    public int getPingModern(Player p) {
+
+        try {
+
+            int ping = (int) (p.getPing()
+                    * plugin.config.pingMultiplier + plugin.config.pingOffset);
+
+            return Math.max(ping, 0); /* greater of the 2 values */
+
+        } catch (Exception e) {
+
+            return -1;
 
         }
 
