@@ -1,5 +1,5 @@
 name: SlashPing
-main: com.battleasya.SlashPing
+main: com.battleasya.slashping.SlashPing
 version: 1.0.2
 author: Dennie
 website: http://battleasya.com
