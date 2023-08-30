@@ -1,6 +1,6 @@
 <br>
-<h3 align="center">Slash Ping</h3>
-<p align="center">Enables to check in-game ping with /ping.</p>
+<p align="center"><img src="https://i.imgur.com/BM3lYc1.png"><br>
+Enables to check in-game ping with /ping.</p>
 
 <p align="center">
     <a href="https://github.com/denniemok/Slash-Ping/releases">Latest Release</a> •
@@ -16,6 +16,8 @@
 
 ### Introduction
 This is a **minimalist** plugin with exactly one function: enables the checking of in-game ping with **/ping**. Nothing fancy or complicated is involved. What it does is only the simplest task you ever ask for, hence the performance and size. <br>
+
+<img src="https://i.imgur.com/DfEwsZ1.png"><br>
 
 <hr>
 
@@ -46,6 +48,8 @@ Round-down here means taking only the integral part from the final result. Multi
 ### Closest Match
 
 Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match on the server! Isn't it good news for lazy people?
+
+<img src="https://i.imgur.com/P8V5qAu.png"><br>
 
 <hr>
 
