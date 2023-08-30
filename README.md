@@ -1,4 +1,4 @@
-<br>
+<br><br>
 <p align="center"><img src="https://i.imgur.com/BM3lYc1.png"><br>
 Enables to check in-game ping with /ping.</p>
 
