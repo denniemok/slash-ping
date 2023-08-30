@@ -1,6 +1,6 @@
 name: SlashPing
 main: com.battleasya.slashping.SlashPing
-version: 1.0.4
+version: 1.0.5
 author: Dennie
 website: http://battleasya.com
 description: Minimalist Ping Plugin

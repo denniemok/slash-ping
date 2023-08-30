@@ -9,7 +9,7 @@ Enables to check in-game ping with /ping.</p>
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Version-1.0.4-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
+    <img src="https://img.shields.io/badge/Version-1.0.5-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
 </p><br>
 
 <hr>
