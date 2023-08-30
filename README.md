@@ -22,13 +22,14 @@ This is a **minimalist** plugin with exactly one function: enables the checking 
 ### Major Highlights
 - EssentialsX-style default message preset.
 - Simple and lightweight; No unnecessary features other than /ping.
-- Configure almost everything in config.yml. <br>
-Modify ping values with multiplier and offset.
-- Exemption to being a ping target is especially useful for admins to go completely invisible from normal players. <br>
-Without introducing new exploits to your existing vanish system.
-- Bypass exemption is designed for personnel who can see vanished users or have the need to administer at a high level
+- Configure almost everything in config.yml.
+- Modify ping values with multiplier and offset.
+- Exemption to being a ping target.<br>
+_Especially useful for admins to go completely invisible from normal players without introducing new exploits to your existing vanish system._
+- Bypass exemption to being a ping target.
+_Designed for personnel who can see vanished users or have the need to administer at a high level._
 - Forward compatible to all versions from 1.8 and onwards.<br>
-Utilised a reflection approach to retrieve ping values regardless of server versions. <br>
+_Utilised a reflection approach to retrieve ping values regardless of server versions._ <br>
 
 <hr>
 
