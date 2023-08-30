@@ -22,15 +22,13 @@ This is a minimalist plugin with exactly one function: /ping. Nothing fancy or c
 ### Runtime Requirements
 - Java 8 or above
 - Spigot 1.8 or above, or equivalent forks
-- PremiumVanish 2.5.14 or above, or SuperVanish for Vanish Edition
 - Permission plugin, preferably LuckPerms or PermissionsEx <br>
 
 <hr>
 
 ### Build Dependencies
 - Java 8
-- Spigot API 1.8.8 R0.1
-- PremiumVanish 2.5.14 <br>
+- Spigot API 1.8.8 R0.1 <br>
 
 <hr>
 

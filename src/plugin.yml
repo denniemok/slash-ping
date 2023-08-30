@@ -4,7 +4,6 @@ version: 1.0.3
 author: Dennie
 website: http://battleasya.com
 description: Minimalist Ping Plugin
-softdepend: [SuperVanish, PremiumVanish]
 commands:
   ping:
     description: Ping yourself.
@@ -18,3 +17,4 @@ permissions:
       ping.others: true
       ping.reload: true
       ping.exempt: true
+      ping.ignoreexempt: true
