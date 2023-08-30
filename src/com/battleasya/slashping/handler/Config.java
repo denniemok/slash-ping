@@ -15,9 +15,13 @@ public class Config {
 
     public String pingOthers;
 
+    public String pingFailed;
+
     public double pingMultiplier;
 
-    public String pingSyntax;
+    public double pingOffset;
+
+    public String incorrectSyntax;
 
     public String reloadConfig;
 
@@ -29,10 +33,12 @@ public class Config {
 
         pingSelf = config.getString("ping-self");
         pingOthers = config.getString("ping-others");
+        pingFailed = config.getString("ping-failed");
         pingMultiplier = config.getDouble("ping-multiplier");
-        pingSyntax = config.getString("ping-syntax");
-        reloadConfig = config.getString("reload-config");
+        pingOffset = config.getDouble("ping-offset");
+        incorrectSyntax = config.getString("incorrect-syntax");
         noPermission = config.getString("no-permission");
+        reloadConfig = config.getString("reload-config");
 
     }
 
