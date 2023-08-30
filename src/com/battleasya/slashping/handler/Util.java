@@ -1,4 +1,4 @@
-package com.battleasya.handler;
+package com.battleasya.slashping.handler;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;

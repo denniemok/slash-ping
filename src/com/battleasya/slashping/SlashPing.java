@@ -1,8 +1,8 @@
-package com.battleasya;
+package com.battleasya.slashping;
 
-import com.battleasya.command.Ping;
-import com.battleasya.command.Reload;
-import com.battleasya.handler.Config;
+import com.battleasya.slashping.command.Ping;
+import com.battleasya.slashping.command.Reload;
+import com.battleasya.slashping.handler.Config;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SlashPing extends JavaPlugin {

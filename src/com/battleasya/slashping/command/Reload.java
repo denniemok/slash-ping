@@ -1,7 +1,7 @@
-package com.battleasya.command;
+package com.battleasya.slashping.command;
 
-import com.battleasya.SlashPing;
-import com.battleasya.handler.Util;
+import com.battleasya.slashping.SlashPing;
+import com.battleasya.slashping.handler.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
