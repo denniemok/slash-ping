@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Version-1.0.3-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
+    <img src="https://img.shields.io/badge/Version-1.0.4-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
 </p><br>
 
 <hr>
@@ -28,7 +28,8 @@ This is a minimalist plugin with exactly one function: /ping. Nothing fancy or c
 
 ### Build Dependencies
 - Java 8
-- Spigot API 1.8.8 R0.1 <br>
+- Spigot API 1.8.8 R0.1
+- Spigot API 1.20.1 R0.1<br>
 
 <hr>
 
