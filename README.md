@@ -39,7 +39,7 @@ Ping in Java does not only take into account network latency but also server-int
 
 `Round Down ( Original Ping Value * Multiplier + Offset )`
 
-Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) while offset by addition (default 0, allows negative decimal values).
+Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) while offset by addition (default 0, allows negative decimal values). Both parameters are configurable in config.yml.
 
 <hr>
 
