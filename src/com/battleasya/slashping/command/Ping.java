@@ -2,7 +2,7 @@ package com.battleasya.slashping.command;
 
 import com.battleasya.slashping.SlashPing;
 import com.battleasya.slashping.handler.Util;
-import de.myzelyam.api.vanish.VanishAPI;
+// import de.myzelyam.api.vanish.VanishAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -60,7 +60,7 @@ public class Ping implements CommandExecutor {
 
                 Player p = Bukkit.getPlayer(args[0]);
 
-                if (p != null && !p.hasPermission("ping.exempt") && !VanishAPI.isInvisible(p)) {
+                if (p != null && (!p.hasPermission("ping.exempt") || sender.hasPermission("ping.ignoreexempt"))) {
 
                     String playerName = p.getName();
                     String ping = String.valueOf(getPing(p));
