@@ -25,8 +25,8 @@ This is a **minimalist** plugin with exactly one function: enables the checking 
 - Configure almost everything in config.yml.
 - Modify ping values with multiplier and offset.
 - Exemption to being a ping target.<br>
-_Especially useful for admins to go completely invisible from normal players without introducing new exploits to your existing vanish system._
-- Bypass exemption to being a ping target.
+_Especially useful for admins to go completely invisible from normal players without conflicting with vanish system._
+- Bypass exemption to being a ping target. <br>
 _Designed for personnel who can see vanished users or have the need to administer at a high level._
 - Forward compatible to all versions from 1.8 and onwards.<br>
 _Utilised a reflection approach to retrieve ping values regardless of server versions._ <br>
@@ -35,7 +35,7 @@ _Utilised a reflection approach to retrieve ping values regardless of server ver
 
 ### Ping Normalisation
 
-This plugin allows ping to be adjusted before displaying to users. I offer this function simply because ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). When the server gets laggier, the ping somehow goes insane as well. To avoid players from complaining about high ping due to occasional lag spikes (e.g., the notorious "SERVER LAGGGGG!!!!!!!!" whine), a way to (fake) normalise the values is provided.
+Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). When the server gets laggier, the ping somehow goes higher as well. To avoid players from always complaining about high ping due to occasional lag spikes (e.g., the notorious "SERVER LAGGGGG!!!!!!!!" whine), a way to (fake) normalise the ping values before displaying is provided.
 
 `Round Down ( Original Ping Value * Multiplier + Offset )`
 
