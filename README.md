@@ -25,7 +25,7 @@ This is a **minimalist** plugin with exactly one function: enables the checking 
 - Configure almost everything in config.yml.
 - Modify ping values with multiplier and offset.
 - Exemption to being a ping target.<br>
-_Especially useful for admins to go completely invisible from normal players without conflicting with vanish system._
+_Especially useful for admins to go completely invisible from normal players without conflicting much with the vanish system._
 - Bypass exemption to being a ping target. <br>
 _Designed for personnel who can see vanished users or have the need to administer at a high level._
 - Forward compatible to all versions from 1.8 and onwards.<br>
@@ -35,19 +35,17 @@ _Utilised a reflection approach to retrieve ping values regardless of server ver
 
 ### Ping Normalisation
 
-Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). When the server gets laggier, the ping somehow goes higher as well. To avoid players from always complaining about high ping due to occasional lag spikes (e.g., the notorious "SERVER LAGGGGG!!!!!!!!" whine), a way to (fake) normalise the ping values before displaying is provided.
+Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). When the server gets a heavier load, the ping in relative also goes higher. To account for this, a way to normalise the ping values before displaying is provided.
 
 `Round Down ( Original Ping Value * Multiplier + Offset )`
 
-Round-down here means taking only the integral part from the final result.
-Multiplier and offset are both configurable in config.yml.
-Multiplier provides normalisation in multiplication (default 0.8) while offset in addition (default 0, allows negative decimal values).
+Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) while offset by addition (default 0, allows negative decimal values).
 
 <hr>
 
 ### Closest Match
 
-Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match on the server! Isn't it good news for lazy people? (Although they can always use tab complete, which is better IMO...)
+Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match on the server! Isn't it good news for lazy people?
 
 <hr>
 
