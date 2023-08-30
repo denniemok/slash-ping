@@ -113,7 +113,13 @@ public class Ping implements CommandExecutor {
 
         } catch (Exception e) {
 
-            return -1;
+            try {
+                return (int) (p.getPing() * plugin.config.pingMultiplier + plugin.config.pingOffset);
+            } catch (Exception e2) {
+                return -1;
+            }
+
+            // return -1;
 
         }
 

@@ -10,18 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/craftbukkit-1.8.8.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$MODULE_DIR$/../lib/craftbukkit-1.8.8.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/SuperVanish.jar!/" />
+          <root url="jar://$MODULE_DIR$/../lib/spigot-api-1.20.1-R0.1-20230826.083319-58.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
