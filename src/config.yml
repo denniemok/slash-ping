@@ -1,4 +1,4 @@
-# Slash Ping 1.0.3
+# Slash Ping 1.0.4
 # https://github.com/denniemok/Slash-Ping
 
 ping-self: "&6Your ping is &c%ping% &6ms."
@@ -10,6 +10,7 @@ ping-failed: "&cError: &4You cannot ping that person."
 # formula: round down ( original value * multiplier + offset )
 ping-multiplier: 0.8
 ping-offset: 0
+# offset can be a negative decimal value
 
 incorrect-syntax: "&cSyntax: /ping [name]"
 no-permission: "&8(&4&l!&8) &6Unknown Command."
