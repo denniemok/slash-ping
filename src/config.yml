@@ -1,14 +1,15 @@
-# Slash Ping
+# Slash Ping 1.0.3
+# https://github.com/denniemok/Slash-Ping
 
 ping-self: "&6Your ping is &c%ping% &6ms."
 ping-others: "&c%name%&6's ping is &c%ping% &6ms."
 
+## triggered when target is offline, vanished or has the ping.exempt permission
 ping-failed: "&cError: &4You cannot ping that person."
-# triggered when the target is offline, vanished or has the ping.exempt permission
 
+# formula: round down ( original value * multiplier + offset )
 ping-multiplier: 0.8
 ping-offset: 0
-# formula: original value * multiplier + offset
 
 incorrect-syntax: "&cSyntax: /ping [name]"
 no-permission: "&8(&4&l!&8) &6Unknown Command."
