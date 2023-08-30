@@ -1,6 +1,6 @@
 <br>
 <h3 align="center">Slash Ping</h3>
-<p align="center">A minimalist ping plugin.</p>
+<p align="center">Enables to check in-game ping with /ping.</p>
 
 <p align="center">
     <a href="https://github.com/denniemok/Slash-Ping/releases">Latest Release</a> •
@@ -15,7 +15,20 @@
 <hr>
 
 ### Introduction
-This is a minimalist plugin with exactly one function: allows players to check their in-game ping with /ping. Nothing fancy or complicated is involved. It only does the simplest task you ask for, and hence the performance (and name). <br>
+This is a minimalist plugin with exactly one function: enables the checking of in-game ping with /ping. It's nothing fancy or complicated. It only does the simplest task you ask for, hence the performance and size. <br>
+
+<hr>
+
+### Main Features
+- EssentialsX-style default message preset.
+- Simple and lightweight; No unnecessary features other than /ping.
+- Configure almost everything in config.yml. <br>
+Modify ping values with multiplier and offset.
+- Exemption to being a ping target is especially useful for admins to go completely invisible from normal players. <br>
+Without introducing new exploits to your existing vanish system.
+- Bypass exemption is designed for personnel who can see vanished users or have the need to administer at a high level
+- Forward compatible to all versions from 1.8 and onwards.<br>
+Utilised a reflection approach to retrieve ping values regardless of server versions. <br>
 
 <hr>
 
