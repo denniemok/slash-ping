@@ -1,16 +1,17 @@
-# Slash Ping 1.0.4
+# Slash Ping 1.0.5
+# https://www.spigotmc.org/resources/112371/
 # https://github.com/denniemok/Slash-Ping
 
 ping-self: "&6Your ping is &c%ping% &6ms."
 ping-others: "&c%name%&6's ping is &c%ping% &6ms."
 
-## triggered when target is offline, vanished or has the ping.exempt permission
+## triggered if the target is offline or has exemption permission
 ping-failed: "&cError: &4You cannot ping that person."
 
-# formula: round down ( original value * multiplier + offset )
+# normalised ping =  round down ( original ping * multiplier + offset )
+# offset can be a negative decimal value
 ping-multiplier: 0.8
 ping-offset: 0
-# offset can be a negative decimal value
 
 incorrect-syntax: "&cSyntax: /ping [name]"
 no-permission: "&8(&4&l!&8) &6Unknown Command."
