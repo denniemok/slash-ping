@@ -20,9 +20,9 @@ public class Reload implements CommandExecutor {
         if (sender.hasPermission("ping.reload")) {
             plugin.reloadConfig();
             plugin.config.fetchConfig();
-            Util.sendMessage(sender,  plugin.config.reloadConfig);
+            Util.sendMessage(sender, plugin.config.reloadConfig);
         } else {
-            Util.sendMessage(sender,  plugin.config.noPermission);
+            Util.sendMessage(sender, plugin.config.noPermission);
         }
 
         return true;

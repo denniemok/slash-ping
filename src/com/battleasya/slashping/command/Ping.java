@@ -21,9 +21,9 @@ public class Ping implements CommandExecutor {
         this.plugin = plugin;
     }
 
-    private static Method getHandleMethod;
+    private Method getHandleMethod;
 
-    private static Field pingField;
+    private Field pingField;
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -38,14 +38,16 @@ public class Ping implements CommandExecutor {
 
                 Player p = Bukkit.getPlayer(sender.getName());
 
+                String ping = String.valueOf(getPing(p));
                 // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
-                int ping = (int) (getPing(p) * plugin.config.pingMultiplier);
 
                 Util.sendMessage(sender, plugin.config.pingSelf
-                        .replaceAll("%ping%", String.valueOf(ping)));
+                        .replaceAll("%ping%", ping));
 
             } else {
-                Util.sendMessage(sender,  plugin.config.noPermission);
+
+                Util.sendMessage(sender, plugin.config.noPermission);
+
             }
 
             return true;
@@ -59,29 +61,39 @@ public class Ping implements CommandExecutor {
                 Player p = Bukkit.getPlayer(args[0]);
 
                 if (p != null && !p.hasPermission("ping.exempt") && !VanishAPI.isInvisible(p)) {
+
+                    String playerName = p.getName();
+                    String ping = String.valueOf(getPing(p));
                     // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
-                    int ping = (int) (getPing(p) * plugin.config.pingMultiplier);
-                    Util.sendMessage(sender,  plugin.config.pingOthers
-                            .replaceAll("%name%", p.getName())
-                            .replaceAll("%ping%", String.valueOf(ping)));
-                    return true;
+
+                    Util.sendMessage(sender, plugin.config.pingOthers
+                            .replaceAll("%name%", playerName)
+                            .replaceAll("%ping%", ping));
+
+                } else {
+
+                    Util.sendMessage(sender, plugin.config.pingFailed);
+
                 }
 
             } else {
-                Util.sendMessage(sender,  plugin.config.noPermission);
-                return true;
+
+                Util.sendMessage(sender, plugin.config.noPermission);
+
             }
+
+            return true;
 
         }
 
-        Util.sendMessage(sender,  plugin.config.pingSyntax);
+        Util.sendMessage(sender, plugin.config.incorrectSyntax);
         return true;
 
     }
 
     /* https://www.spigotmc.org/threads/get-player-ping-with-reflection.147773/ */
     /* credits to konsolas for the lazily loaded system */
-    public static int getPing(Player p) {
+    public int getPing(Player p) {
 
         try {
 
@@ -97,10 +109,12 @@ public class Ping implements CommandExecutor {
                 pingField.setAccessible(true);
             }
 
-            return pingField.getInt(entityPlayer);
+            return (int) (pingField.getInt(entityPlayer) * plugin.config.pingMultiplier + plugin.config.pingOffset);
 
         } catch (Exception e) {
-            return 0;
+
+            return -1;
+
         }
 
     }
