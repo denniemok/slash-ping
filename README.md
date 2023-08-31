@@ -39,24 +39,18 @@ Ping in Java does not only take into account network latency but also server-int
 
 **Normalised Value = Max ( Round Down ( Original Value * Multiplier + Offset ), 0 )**
 
-Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) while offset by addition (default 0, allows negative decimal values). Both parameters are configurable in config.yml. <p>
-
-0 is the absolute minimum. -1 indicates errors. <br>
+Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) while offset by addition (default 0, allows negative decimal values). Both parameters are configurable in config.yml. <br>
 
 ### Closest Match
 
-Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match (based on the first few characters of a name) on the server! Isn't it good news for lazy people?
-
-<img src="https://i.imgur.com/P8V5qAu.png"><br>
+Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match (based on the first few characters of a name) on the server! Isn't it good news for lazy people?<br>
 
 ### HEX Colour
 
 This plugin supports the colouring of chat messages with HEX codes on 1.16+ servers.
 
 Example:
-`ping-self: "#e69296Your ping is #c8a2c8%ping% #e69296ms."`
-
-<img src="https://i.imgur.com/lIagNVi.png"><br>
+`ping-self: "#e69296Your ping is #c8a2c8%ping% #e69296ms."`<br>
 
 <hr>
 
