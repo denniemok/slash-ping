@@ -24,6 +24,7 @@ public class SlashPing extends JavaPlugin {
         Objects.requireNonNull(getCommand("pingreload")).setExecutor(new Reload(this));
 
         Metrics metrics = new Metrics(this, 19688);
+        getLogger().info("Starting Metrics. Opt-out using the global bStats config.");
 
     }
 
