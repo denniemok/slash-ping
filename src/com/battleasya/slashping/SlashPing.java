@@ -9,8 +9,6 @@ public class SlashPing extends JavaPlugin {
 
     public Config config;
 
-    public int version = 0; /* 0: Unknown, 1: Legacy, 2: Modern */
-
     @Override
     public void onEnable() {
 
