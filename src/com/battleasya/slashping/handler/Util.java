@@ -1,6 +1,6 @@
 package com.battleasya.slashping.handler;
 
-import org.bukkit.ChatColor;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
