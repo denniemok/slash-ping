@@ -15,7 +15,7 @@ Enables to check in-game ping with /ping.</p>
 <hr>
 
 ### Introduction
-This is a **minimalist** plugin with exactly one function: enables the checking of in-game ping with **/ping**. Nothing fancy or complicated is involved. What it does is only the simplest task you ever ask for, hence the performance and size. <br>
+This is a **lightweight** plugin with exactly one function: enables the checking of in-game ping with **/ping**. Nothing fancy or complicated is involved. What it does is only the simplest task you ever ask for, hence the performance and size. <br>
 
 <img src="https://i.imgur.com/DfEwsZ1.png"><br>
 
