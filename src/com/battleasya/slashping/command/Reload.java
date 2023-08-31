@@ -17,12 +17,17 @@ public class Reload implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
-        if (sender.hasPermission("ping.reload")) {
+        if (!sender.hasPermission("ping.reload")) {
+            Util.sendMessage(sender, plugin.config.noPermission);
+            return true;
+        }
+
+        if (args.length == 0) {
             plugin.reloadConfig();
             plugin.config.fetchConfig();
             Util.sendMessage(sender, plugin.config.reloadConfig);
         } else {
-            Util.sendMessage(sender, plugin.config.noPermission);
+            Util.sendMessage(sender, plugin.config.reloadSyntax);
         }
 
         return true;
