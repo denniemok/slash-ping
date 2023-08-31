@@ -7,6 +7,7 @@
 
 <p align="center">
     Enables to check in-game ping with /ping.<br>
+    <a href="https://www.spigotmc.org/resources/112371/">Spigot Page</a> •
     <a href="https://github.com/denniemok/Slash-Ping/releases">Latest Release</a> •
     <a href="https://github.com/denniemok/Slash-Ping/wiki">User Guide</a> •
     <a href="https://github.com/denniemok/Slash-Ping/issues">Issue Tracker</a>
@@ -24,7 +25,7 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 ### Major Highlights
 - EssentialsX-style default message preset.
 - Simple and lightweight; No unnecessary features other than /ping.
-- Configure almost everything in config.yml.
+- Configure almost everything in config.yml, HEX color code support included.
 - Modify ping values with multiplier and offset.
 - Exemption to being a ping target.<br>
 _Especially useful for admins to go completely invisible from normal players without conflicting much with the vanish system._
@@ -55,6 +56,17 @@ Users no longer have to type in the full name of a ping target because the plugi
 
 <hr>
 
+### HEX Color
+
+This plugin supports coloring chat messages with HEX codes on 1.16+ servers.
+
+Example:
+`ping-self: "#e69296Your ping is #c8a2c8%ping% #e69296ms."`
+
+<img src="https://i.imgur.com/ZzgUF6B.png"><br>
+
+<hr>
+
 ### Runtime Requirements
 - Java 8 or above
 - Spigot 1.8 or above, or equivalent forks
@@ -64,8 +76,10 @@ Users no longer have to type in the full name of a ping target because the plugi
 
 ### Build Dependencies
 - Java 8
-- Spigot API 1.8.8 R0.1
-- Spigot API 1.20.1 R0.1<br>
+- Spigot API 1.8.8 R0.1 Shaded
+- Spigot API 1.20.1 R0.1 Shaded
+
+Spigot APIs can be obtained from [here](https://hub.spigotmc.org/nexus/content/repositories/snapshots/org/spigotmc/spigot-api/). <br>
 
 <hr>
 

@@ -2,6 +2,9 @@
 # https://www.spigotmc.org/resources/112371/
 # https://github.com/denniemok/Slash-Ping
 
+# Support coloring messages with HEX codes on 1.16+ versions
+# e.g., #e69296Your ping is #c8a2c8%ping% #e69296ms.
+
 ping-self: "&6Your ping is &c%ping% &6ms."
 ping-others: "&c%name%&6's ping is &c%ping% &6ms."
 

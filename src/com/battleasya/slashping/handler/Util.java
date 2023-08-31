@@ -1,11 +1,14 @@
 package com.battleasya.slashping.handler;
 
+import com.battleasya.slashping.SlashPing;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Util {
 
@@ -13,10 +16,30 @@ public class Util {
 
     private static Field pingField;
 
-    public static int version = 0; /* 0: Unknown, 1: Legacy, 2: Modern */
+    public static int getPingApproach = 0; /* 0: Unknown, 1: Legacy, 2: Modern */
 
     public static void sendMessage(CommandSender sender, String message) {
-        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+        sender.sendMessage(translate(message));
+    }
+
+    public static String translate(String message) {
+
+        /* HEX code support starts at 1.16 */
+        if (SlashPing.getServerVersion() >= 16) {
+
+            Pattern pattern = Pattern.compile("#[a-fA-F0-9]{6}");
+            Matcher matcher = pattern.matcher(message);
+
+            while (matcher.find()) {
+                String color = message.substring(matcher.start(), matcher.end());
+                message = message.replace(color, ChatColor.of(color).toString());
+                matcher = pattern.matcher(message);
+            }
+
+        }
+
+        return ChatColor.translateAlternateColorCodes('&', message);
+
     }
 
     public static boolean canPingSelf(CommandSender sender) {
@@ -29,7 +52,7 @@ public class Util {
 
     public static int getPing(Player p, double m, double o) {
 
-        switch (version) {
+        switch (getPingApproach) {
             case 1:
                 return getPingLegacy(p, m, o);
             case 2:
@@ -37,10 +60,10 @@ public class Util {
             default: /* unknown = 0 */
                 int legacyResult = getPingLegacy(p, m, o); /* try legacy first */
                 if (legacyResult == -1) {
-                    version = 2;
+                    getPingApproach = 2;
                     return getPingModern(p, m, o);
                 } else {
-                    version = 1;
+                    getPingApproach = 1;
                     return legacyResult;
                 }
         }

@@ -12,6 +12,8 @@ public class SlashPing extends JavaPlugin {
 
     public Config config;
 
+    public static int version;
+
     @Override
     public void onEnable() {
 
@@ -26,6 +28,17 @@ public class SlashPing extends JavaPlugin {
         new Metrics(this, 19688);
         getLogger().info("Starting Metrics. Opt-out using the global bStats config.");
 
+        /* e.g., 1.14-R0.1-SNAPSHOT */
+        try {
+            version = Integer.parseInt(getServer().getBukkitVersion().split("-")[0].split("\\.")[1]);
+        } catch (Exception e) {
+            version = 8;
+        }
+
+    }
+
+    public static int getServerVersion() {
+        return version;
     }
 
 }
