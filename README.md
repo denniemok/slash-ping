@@ -39,9 +39,11 @@ _Utilised a reflection approach to retrieve ping values regardless of server ver
 
 Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). When the server gets a heavier load, the ping in relative also goes higher. To account for this, a way to normalise the ping values before displaying is provided.
 
-`Round Down ( Original Ping Value * Multiplier + Offset )`
+`Normalised Value = Max ( Round Down ( Original Value * Multiplier + Offset ), 0 )`
 
-Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) while offset by addition (default 0, allows negative decimal values). Both parameters are configurable in config.yml.
+Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) while offset by addition (default 0, allows negative decimal values). Both parameters are configurable in config.yml. <p>
+
+0 is the absolute minimum. -1 indicates errors. <br>
 
 <hr>
 
