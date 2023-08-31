@@ -48,9 +48,7 @@ Users no longer have to type in the full name of a ping target because the plugi
 ### 3. HEX Colour Support
 
 This plugin supports the colouring of chat messages with HEX codes on 1.16+ servers.
-
-Example:
-`ping-self: "#e69296Your ping is #c8a2c8%ping% #e69296ms."`<br>
+Example: `ping-self: "#e69296Your ping is #c8a2c8%ping% #e69296ms."`<br>
 
 <hr>
 
