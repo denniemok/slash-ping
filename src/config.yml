@@ -8,12 +8,16 @@ ping-others: "&c%name%&6's ping is &c%ping% &6ms."
 ## triggered if the target is offline or has exemption permission
 ping-failed: "&cError: &4You cannot ping that person."
 
-# normalised ping =  round down ( original ping * multiplier + offset )
+# normalised ping =  max ( round down ( original ping * multiplier + offset ), 0 )
 # offset can be a negative decimal value
 ping-multiplier: 0.8
 ping-offset: 0
 
-incorrect-syntax: "&cSyntax: /ping [name]"
+ping-syntax: "&cSyntax: /ping [name]"
+reload-syntax: "&cSyntax: /pingreload"
+
 no-permission: "&8(&4&l!&8) &6Unknown Command."
+no-permission-self: "&cYou do not have permission to ping yourself."
+no-permission-others: "&cYou do not have permission to ping others."
 
 reload-config: "&6SlashPing Config Reloaded."
