@@ -1,5 +1,6 @@
 package com.battleasya.slashping;
 
+import com.battleasya.slashping.bstats.Metrics;
 import com.battleasya.slashping.command.Ping;
 import com.battleasya.slashping.command.Reload;
 import com.battleasya.slashping.handler.Config;
@@ -21,6 +22,8 @@ public class SlashPing extends JavaPlugin {
 
         Objects.requireNonNull(getCommand("ping")).setExecutor(new Ping(this));
         Objects.requireNonNull(getCommand("pingreload")).setExecutor(new Reload(this));
+
+        Metrics metrics = new Metrics(this, 19688);
 
     }
 
