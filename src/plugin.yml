@@ -1,6 +1,7 @@
 name: SlashPing
 main: com.battleasya.slashping.SlashPing
-version: 1.0.6
+version: 1.0.5
+api-version: 1.14
 author: Dennie
 website: http://battleasya.com
 description: Enables the checking of in-game ping with /ping.
