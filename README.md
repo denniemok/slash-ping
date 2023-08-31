@@ -35,9 +35,9 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 
 Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). When the server gets a heavier load, the ping in relative also goes higher. To account for this, a way to normalise the ping values before displaying is provided.
 
-**Normalised Value = Max ( Round Down ( Original Value * Multiplier + Offset ), 0 )**
+**Normalised Value = Max ( Round ( Original Value * Multiplier + Offset ), 0 )**
 
-Round-down here means taking only the integral part from the intermediate result. Multiplier normalises the values by multiplication while offset normalises by addition. Both parameters are configurable. <br>
+Round here means taking only the integral part from the intermediate result. Multiplier normalises the values by multiplication while offset normalises by addition. Both parameters are configurable. <br>
 
 ### 2. Closest Name Match
 
