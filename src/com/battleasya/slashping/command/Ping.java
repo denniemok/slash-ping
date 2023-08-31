@@ -2,7 +2,6 @@ package com.battleasya.slashping.command;
 
 import com.battleasya.slashping.SlashPing;
 import com.battleasya.slashping.handler.Util;
-// import de.myzelyam.api.vanish.VanishAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
