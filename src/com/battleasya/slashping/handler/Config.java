@@ -21,11 +21,17 @@ public class Config {
 
     public double pingOffset;
 
-    public String incorrectSyntax;
+    public String pingSyntax;
 
-    public String reloadConfig;
+    public String reloadSyntax;
 
     public String noPermission;
+
+    public String noPermissionSelf;
+
+    public String noPermissionOthers;
+
+    public String reloadConfig;
 
     public void fetchConfig() {
 
@@ -33,11 +39,19 @@ public class Config {
 
         pingSelf = config.getString("ping-self");
         pingOthers = config.getString("ping-others");
+
         pingFailed = config.getString("ping-failed");
+
         pingMultiplier = config.getDouble("ping-multiplier");
         pingOffset = config.getDouble("ping-offset");
-        incorrectSyntax = config.getString("incorrect-syntax");
+
+        pingSyntax = config.getString("ping-syntax");
+        reloadSyntax = config.getString("reload-syntax");
+
         noPermission = config.getString("no-permission");
+        noPermissionSelf = config.getString("no-permission-self");
+        noPermissionOthers = config.getString("no-permission-others");
+
         reloadConfig = config.getString("reload-config");
 
     }
