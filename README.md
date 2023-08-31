@@ -39,11 +39,11 @@ Ping in Java does not only take into account network latency but also server-int
 
 **Normalised Value = Max ( Round Down ( Original Value * Multiplier + Offset ), 0 )**
 
-Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) while offset by addition (default 0, allows negative decimal values). Both parameters are configurable in config.yml. <br>
+Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) and offset by addition (default 0, allows negative decimal values). Both parameters are configurable. <br>
 
 ### 2. Name Closest Match
 
-Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match (based on the first few characters of a name) on the server! Isn't it good news for lazy people?<br>
+Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match (based on the first few characters of a name) on the server!<br>
 
 ### 3. HEX Colour Support
 
