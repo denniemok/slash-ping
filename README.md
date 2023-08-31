@@ -1,7 +1,7 @@
 <br><br>
-<p align="center"><img src="https://i.imgur.com/BM3lYc1.png"></p>
 
 <p align="center">
+    <img src="https://i.imgur.com/BM3lYc1.png"><br>
     <img src="https://img.shields.io/badge/Version-1.0.5-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
 </p>
 
