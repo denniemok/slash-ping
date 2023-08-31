@@ -63,7 +63,7 @@ This plugin supports the colouring of chat messages with HEX codes on 1.16+ serv
 Example:
 `ping-self: "#e69296Your ping is #c8a2c8%ping% #e69296ms."`
 
-<img src="https://i.imgur.com/ZzgUF6B.png"><br>
+<img src="https://i.imgur.com/lIagNVi.png"><br>
 
 <hr>
 
