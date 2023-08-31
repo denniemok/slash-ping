@@ -37,7 +37,7 @@ Ping in Java does not only take into account network latency but also server-int
 
 **Normalised Value = Max ( Round Down ( Original Value * Multiplier + Offset ), 0 )**
 
-Round-down here means taking only the integral part from the intermediate result. Multiplier normalises by multiplication and offset normalises by addition. Both parameters are configurable. <br>
+Round-down here means taking only the integral part from the intermediate result. Multiplier normalises the values by multiplication while offset normalises by addition. Both parameters are configurable. <br>
 
 ### 2. Closest Name Match
 
