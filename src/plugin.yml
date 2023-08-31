@@ -3,12 +3,12 @@ main: com.battleasya.slashping.SlashPing
 version: 1.0.5
 author: Dennie
 website: http://battleasya.com
-description: Minimalist Ping Plugin
+description: Enables the checking of in-game ping with /ping.
 commands:
   ping:
-    description: Ping yourself.
+    description: Check in-game ping.
   pingreload:
-    description: Ping someone.
+    description: Reload config.
 permissions:
   ping.*:
     default: op
