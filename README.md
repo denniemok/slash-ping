@@ -1,15 +1,15 @@
 <br><br>
-<p align="center"><img src="https://i.imgur.com/BM3lYc1.png"><br>
-Enables to check in-game ping with /ping.</p>
-
-<p align="center">
-    <a href="https://github.com/denniemok/Slash-Ping/releases">Latest Release</a> •
-    <a href="https://github.com/denniemok/Slash-Ping/wiki">User Guide</a> •
-    <a href="https://github.com/denniemok/Slash-Ping/issues">Issue Tracker</a>
-</p>
+<p align="center"><img src="https://i.imgur.com/BM3lYc1.png"></p>
 
 <p align="center">
     <img src="https://img.shields.io/badge/Version-1.0.5-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
+</p>
+
+<p align="center">
+    Enables to check in-game ping with /ping.<br>
+    <a href="https://github.com/denniemok/Slash-Ping/releases">Latest Release</a> •
+    <a href="https://github.com/denniemok/Slash-Ping/wiki">User Guide</a> •
+    <a href="https://github.com/denniemok/Slash-Ping/issues">Issue Tracker</a>
 </p><br>
 
 <hr>
