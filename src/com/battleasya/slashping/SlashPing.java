@@ -5,6 +5,8 @@ import com.battleasya.slashping.command.Reload;
 import com.battleasya.slashping.handler.Config;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public class SlashPing extends JavaPlugin {
 
     public Config config;
@@ -17,8 +19,8 @@ public class SlashPing extends JavaPlugin {
         config = new Config(this);
         config.fetchConfig();
 
-        getCommand("ping").setExecutor(new Ping(this));
-        getCommand("pingreload").setExecutor(new Reload(this));
+        Objects.requireNonNull(getCommand("ping")).setExecutor(new Ping(this));
+        Objects.requireNonNull(getCommand("pingreload")).setExecutor(new Reload(this));
 
     }
 
