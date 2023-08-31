@@ -25,13 +25,13 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 ### Major Highlights
 - EssentialsX-style default message preset.
 - Simple and lightweight; No unnecessary features other than /ping.
-- Configure *almost everything* in config.yml, *HEX colour* support included.
-- Modify ping values with *multiplier* and *offset*.
+- Configure **almost everything** in config.yml, **HEX colour** support included.
+- Modify ping values with **multiplier** and **offset**.
 - Exemption to being a ping target.<br>
 _Especially useful for admins to go completely invisible from normal players without conflicting much with the vanish system._
 - Bypass exemption to being a ping target. <br>
 _Designed for personnel who can see vanished users or have the need to administer at a high level._
-- Forward compatible to all versions from *1.8 and onwards*.<br>
+- Forward compatible to all versions from **1.8 and onwards**.<br>
 _Utilised a reflection approach to retrieve ping values regardless of server versions._ <br>
 
 <hr>
