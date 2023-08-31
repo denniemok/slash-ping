@@ -49,7 +49,7 @@ Round-down here means taking only the integral part from the final result. Multi
 
 ### Closest Match
 
-Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match on the server! Isn't it good news for lazy people?
+Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match (based on the first few characters of a name) on the server! Isn't it good news for lazy people?
 
 <img src="https://i.imgur.com/P8V5qAu.png"><br>
 
