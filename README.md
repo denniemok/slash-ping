@@ -18,18 +18,16 @@
 ### Introduction
 This is a **lightweight** plugin with exactly one function: enables the checking of in-game ping with **/ping**. Nothing fancy or complicated is involved. What it does is only the simplest task you ever ask for, hence the performance and size. <br>
 
-<img src="https://i.imgur.com/DfEwsZ1.png"><br>
-
 <hr>
 
 ### Major Highlights
 - EssentialsX-style default message preset.
-- Simple and lightweight; No unnecessary features other than /ping.
-- Configure **almost everything** in config.yml, **HEX colour** support included.
-- Modify ping values with **multiplier** and **offset**.
-- Exemption to being a ping target.
-- Bypass exemption to being a ping target.
-- Forward compatible to all versions from **1.8 and onwards**.<br>
+- Simple and lightweight, with no unnecessary features other than /ping.
+- Highly configurable with **HEX** colour support included.
+- Enable ping values modification with **multiplier** and **offset**.
+- Go completely intractable from ping with the exempt permission.
+- Bypass target exemption to offer normal pinging at the admin level.
+- Forward compatible with all **1.8+** versions.<br>
 
 <hr>
 
@@ -39,16 +37,16 @@ Ping in Java does not only take into account network latency but also server-int
 
 **Normalised Value = Max ( Round Down ( Original Value * Multiplier + Offset ), 0 )**
 
-Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) and offset by addition (default 0, allows negative decimal values). Both parameters are configurable. <br>
+Round-down here means taking only the integral part from the intermediate result. Multiplier normalises by multiplication and offset normalises by addition. Both parameters are configurable. <br>
 
-### 2. Name Closest Match
+### 2. Closest Name Match
 
-Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match (based on the first few characters of a name) on the server!<br>
+Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match on the server based on the first few characters of a name on the server!<br>
 
 ### 3. HEX Colour Support
 
 This plugin supports the colouring of chat messages with HEX codes on 1.16+ servers.<br>
-Example: `ping-self: "#e69296Your ping is #c8a2c8%ping% #e69296ms."`<br>
+Example: `"#e69296Your ping is #c8a2c8%ping% #e69296ms."`<br>
 
 <hr>
 
