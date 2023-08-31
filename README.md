@@ -33,7 +33,7 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 
 <hr>
 
-### Ping Normalisation
+### 1. Ping Normalisation
 
 Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). When the server gets a heavier load, the ping in relative also goes higher. To account for this, a way to normalise the ping values before displaying is provided.
 
@@ -41,11 +41,11 @@ Ping in Java does not only take into account network latency but also server-int
 
 Round-down here means taking only the integral part from the final result. Multiplier normalises by multiplication (default 0.8) while offset by addition (default 0, allows negative decimal values). Both parameters are configurable in config.yml. <br>
 
-### Closest Match
+### 2. Name Closest Match
 
 Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match (based on the first few characters of a name) on the server! Isn't it good news for lazy people?<br>
 
-### HEX Colour
+### 3. HEX Colour Support
 
 This plugin supports the colouring of chat messages with HEX codes on 1.16+ servers.
 
