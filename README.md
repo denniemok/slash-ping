@@ -56,7 +56,7 @@ Users no longer have to type in the full name of a ping target because the plugi
 
 <hr>
 
-### HEX Color
+### HEX Colour
 
 This plugin supports the colouring of chat messages with HEX codes on 1.16+ servers.
 
