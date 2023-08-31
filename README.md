@@ -27,12 +27,9 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 - Simple and lightweight; No unnecessary features other than /ping.
 - Configure **almost everything** in config.yml, **HEX colour** support included.
 - Modify ping values with **multiplier** and **offset**.
-- Exemption to being a ping target.<br>
-_Especially useful for admins to go completely invisible from normal players without conflicting much with the vanish system._
-- Bypass exemption to being a ping target. <br>
-_Designed for personnel who can see vanished users or have the need to administer at a high level._
+- Exemption to being a ping target.
+- Bypass exemption to being a ping target.
 - Forward compatible to all versions from **1.8 and onwards**.<br>
-_Utilised a reflection approach to retrieve ping values regardless of server versions._ <br>
 
 <hr>
 
@@ -46,15 +43,11 @@ Round-down here means taking only the integral part from the final result. Multi
 
 0 is the absolute minimum. -1 indicates errors. <br>
 
-<hr>
-
 ### Closest Match
 
 Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match (based on the first few characters of a name) on the server! Isn't it good news for lazy people?
 
 <img src="https://i.imgur.com/P8V5qAu.png"><br>
-
-<hr>
 
 ### HEX Colour
 
