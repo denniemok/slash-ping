@@ -8,10 +8,11 @@
 <p align="center">
     Enables to check in-game ping with /ping.<br>
     <a href="https://www.spigotmc.org/resources/112371/">Spigot Page</a> •
-    <a href="https://github.com/denniemok/Slash-Ping/releases">Latest Release</a> •
-    <a href="https://github.com/denniemok/Slash-Ping/wiki">User Guide</a> •
-    <a href="https://github.com/denniemok/Slash-Ping/issues">Issue Tracker</a>
-</p><br>
+    <a href="https://github.com/denniemok/slash-ping/releases">Latest Release</a> •
+    <a href="https://github.com/denniemok/slash-ping/wiki">User Guide</a> •
+    <a href="https://github.com/denniemok/slash-ping/issues">Issue Tracker</a>
+</p>
+<br>
 
 <hr>
 
