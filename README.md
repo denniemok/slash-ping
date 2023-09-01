@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-    Enables to check in-game ping with /ping.<br>
+    Enables the checking of in-game ping with /ping.<br>
     <a href="https://www.spigotmc.org/resources/112371/">Spigot Page</a> •
     <a href="https://github.com/denniemok/slash-ping/releases">Latest Release</a> •
     <a href="https://github.com/denniemok/slash-ping/wiki">User Guide</a> •
