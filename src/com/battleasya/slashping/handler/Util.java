@@ -50,18 +50,18 @@ public class Util {
         return sender.hasPermission("ping.others");
     }
 
-    public static int getPing(Player p, double m, double o) {
+    public static int getPing(Player p, double m, double o, int min) {
 
         switch (getPingApproach) {
             case 1:
-                return getPingLegacy(p, m, o);
+                return getPingLegacy(p, m, o, min);
             case 2:
-                return getPingModern(p, m, o);
+                return getPingModern(p, m, o, min);
             default: /* unknown = 0 */
-                int legacyResult = getPingLegacy(p, m, o); /* try legacy first */
+                int legacyResult = getPingLegacy(p, m, o, min); /* try legacy first */
                 if (legacyResult == -1) {
                     getPingApproach = 2;
-                    return getPingModern(p, m, o);
+                    return getPingModern(p, m, o, min);
                 } else {
                     getPingApproach = 1;
                     return legacyResult;
@@ -72,7 +72,7 @@ public class Util {
 
     /* https://www.spigotmc.org/threads/get-player-ping-with-reflection.147773/ */
     /* credits to konsolas for the reflection system */
-    public static int getPingLegacy(Player player, double multiplier, double offset) {
+    public static int getPingLegacy(Player player, double multiplier, double offset, int minimum) {
 
         try {
 
@@ -90,7 +90,7 @@ public class Util {
 
             int ping = (int) (pingField.getInt(entityPlayer) * multiplier + offset);
 
-            return Math.max(ping, 0); /* greater of the 2 values */
+            return Math.max(ping, minimum); /* greater of the 2 values */
 
         } catch (Exception e) {
 
@@ -100,13 +100,13 @@ public class Util {
 
     }
 
-    public static int getPingModern(Player player, double multiplier, double offset) {
+    public static int getPingModern(Player player, double multiplier, double offset, int minimum) {
 
         try {
 
             int ping = (int) (player.getPing() * multiplier + offset);
 
-            return Math.max(ping, 0); /* greater of the 2 values */
+            return Math.max(ping, minimum); /* greater of the 2 values */
 
         } catch (Exception e) {
 
