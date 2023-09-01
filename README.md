@@ -1,4 +1,4 @@
-<p>
+<p/><p/>
 
 <p align="center">
     <img src="https://i.imgur.com/Ydt6CmB.png"><br>
@@ -12,7 +12,7 @@
     <a href="https://github.com/denniemok/slash-ping/issues">Issue Tracker</a>
 </p>
 
-<p>
+<p/><p/>
 
 <hr>
 
