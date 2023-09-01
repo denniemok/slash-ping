@@ -66,10 +66,9 @@ Use the placeholder **%slashping_ping%** in any PlaceholderAPI-compatible plugin
 
 ### Build Dependencies
 - Java 8
-- Spigot API 1.20.1 R0.1
-- PlaceholderAPI API 1.11.3
+- Spigot-API 1.20.1 R0.1
+- PlaceholderAPI 1.11.3
 
 <hr>
 
 This project is released under the [MIT License](https://opensource.org/license/mit/).
-
