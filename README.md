@@ -25,7 +25,7 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 - Comes with the well-known EssentialsX-style message preset.
 - Works straight to the point with nothing unnecessary other than /ping.
 - Supports **HEX codes** in message configuration on 1.16+ servers.
-- Enables **modification of ping values** with multiplier and offset.
+- Enables **modification of ping values** with simple parameters.
 - Displays normalised pings on **PlaceholderAPI-compatible** plugins.
 - Goes completely intractable from /ping with the exempt permission.
 - Bypasses target exemption to offer normal pinging at the admin level.
