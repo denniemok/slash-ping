@@ -24,9 +24,9 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 ### Major Highlights
 - Comes with the well-known EssentialsX-style message preset.
 - Works straight to the point with nothing unnecessary other than /ping.
-- Supports **HEX** codes in message configuration on 1.16+ servers.
-- Enables modification of ping values with **multiplier** and **offset**.
-- Displays normalised pings on **PlaceholderAPI** compatible plugins.
+- Supports **HEX codes** in message configuration on 1.16+ servers.
+- Enables **modification of ping values** with multiplier and offset.
+- Displays normalised pings on **PlaceholderAPI-compatible** plugins.
 - Goes completely intractable from /ping with the exempt permission.
 - Bypasses target exemption to offer normal pinging at the admin level.
 - Proves to be forward compatible with all **1.8+** versions.
@@ -49,6 +49,10 @@ Users no longer have to type in the full name of a ping target because the plugi
 
 This plugin supports the colouring of chat messages with HEX codes on 1.16+ servers.<br>
 Example: `"#e69296Your ping is #c8a2c8%ping% #e69296ms."`<p>
+
+### 4. PlaceholderAPI Support
+
+Use the placeholder **%slashping_ping%** in any PlaceholderAPI-compatible plugins (e.g., your favourite TAB plugin) to display the normalised ping values.<p>
 
 <hr>
 
