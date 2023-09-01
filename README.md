@@ -35,11 +35,11 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 
 ### 1. Ping Normalisation
 
-Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). When the server gets a heavier load, the ping in relative also goes higher. To account for this, a way to normalise the ping values before displaying is provided.
+Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). Very often, you find yourself entering a 10 ms (from server list) server but end up getting 50 ms ping (with /ping) in-game. To account for this, a way to normalise the ping values before displaying them in chat (or elsewhere with PAPI) is provided.
 
 **Normalised Value = Max ( Round ( Original Value * Multiplier + Offset ), Lower Bound )**
 
-Round here means taking only the integral part from the intermediate result. Multiplier normalises the values by multiplication while offset normalises by addition. Both parameters are configurable. <p>
+Round here means taking only the integral part from the intermediate result. Multiplier normalises the values by multiplication (default 0.8) while offset normalises by addition (default 0). The 2 parameters, together with the lower bound option, are made configurable in config.yml. <p>
 
 ### 2. Closest Name Match
 
