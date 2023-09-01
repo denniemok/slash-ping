@@ -1,18 +1,18 @@
-# Slash-Ping 1.0.5
+# SlashPing 1.0.5
 # https://www.spigotmc.org/resources/112371/
-# https://github.com/denniemok/Slash-Ping
+# https://github.com/denniemok/slash-ping
 
-# Support coloring messages with HEX codes on 1.16+ versions
-# e.g., #e69296Your ping is #c8a2c8%ping% #e69296ms.
+# This plugin supports HEX codes on 1.16+ servers.
+# Example: "#e69296Your ping is #c8a2c8%ping% #e69296ms."
 
 ping-self: "&6Your ping is &c%ping% &6ms."
 ping-others: "&c%name%&6's ping is &c%ping% &6ms."
 
-## triggered if the target is offline or has exemption permission
+## This message is triggered when the target is offline or has the exempt permission.
 ping-failed: "&cError: &4You cannot ping that person."
 
-# normalised ping =  max ( round down ( original ping * multiplier + offset ), 0 )
-# offset can be a negative decimal value
+# Formula: Normalised Ping =  Max ( Round ( Original Ping * Multiplier + Offset ), 0 )
+# Both parameters can be either floats or integers. Offset can be negative.
 ping-multiplier: 0.8
 ping-offset: 0
 
@@ -24,3 +24,6 @@ no-permission-self: "&cYou do not have permission to ping yourself."
 no-permission-others: "&cYou do not have permission to ping others."
 
 reload-config: "&6SlashPing Config Reloaded."
+
+# Don't forget to rate this resource! Have fun!
+# Feel free to report any issues @ https://github.com/denniemok/slash-ping/issues.
