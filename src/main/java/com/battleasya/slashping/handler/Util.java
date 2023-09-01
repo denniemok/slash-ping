@@ -16,7 +16,7 @@ public class Util {
 
     private static Field pingField;
 
-    public static int getPingApproach = 0; /* 0: Unknown, 1: Legacy, 2: Modern */
+    public static int pingApproach = 0; /* 0: Unknown, 1: Legacy, 2: Modern */
 
     public static void sendMessage(CommandSender sender, String message) {
         sender.sendMessage(translate(message));
@@ -52,7 +52,7 @@ public class Util {
 
     public static int getPing(Player p, double m, double o, int min) {
 
-        switch (getPingApproach) {
+        switch (pingApproach) {
             case 1:
                 return getPingLegacy(p, m, o, min);
             case 2:
@@ -60,10 +60,10 @@ public class Util {
             default: /* unknown = 0 */
                 int legacyResult = getPingLegacy(p, m, o, min); /* try legacy first */
                 if (legacyResult == -1) {
-                    getPingApproach = 2;
+                    pingApproach = 2;
                     return getPingModern(p, m, o, min);
                 } else {
-                    getPingApproach = 1;
+                    pingApproach = 1;
                     return legacyResult;
                 }
         }
