@@ -6,7 +6,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-// DEPRECATED: import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 public class Ping implements CommandExecutor {
@@ -41,8 +40,8 @@ public class Ping implements CommandExecutor {
 
                 String ping = String.valueOf(Util.getPing(player
                         , plugin.config.pingMultiplier
-                        , plugin.config.pingOffset));
-                // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
+                        , plugin.config.pingOffset
+                        , plugin.config.pingMinimum));
 
                 Util.sendMessage(sender, plugin.config.pingSelf
                         .replaceAll("%ping%", ping));
@@ -67,10 +66,11 @@ public class Ping implements CommandExecutor {
                         || sender.hasPermission("ping.ignoreexempt"))) {
 
                     String playerName = player.getName();
+
                     String ping = String.valueOf(Util.getPing(player
                             , plugin.config.pingMultiplier
-                            , plugin.config.pingOffset));
-                    // DEPRECATED: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * plugin.config.pingOffset);
+                            , plugin.config.pingOffset
+                            , plugin.config.pingMinimum));
 
                     Util.sendMessage(sender, plugin.config.pingOthers
                             .replaceAll("%name%", playerName)
