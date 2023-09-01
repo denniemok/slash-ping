@@ -2,8 +2,13 @@
 # https://www.spigotmc.org/resources/112371/
 # https://github.com/denniemok/slash-ping
 
+# HEX Colour Support
 # This plugin supports HEX codes on 1.16+ servers.
 # Example: "#e69296Your ping is #c8a2c8%ping% #e69296ms."
+
+# PlaceholderAPI Support
+# Use the placeholder "%slashping_ping%" on PAPI compatible plugins
+# to display normalised ping values.
 
 ping-self: "&6Your ping is &c%ping% &6ms."
 ping-others: "&c%name%&6's ping is &c%ping% &6ms."
@@ -12,10 +17,9 @@ ping-others: "&c%name%&6's ping is &c%ping% &6ms."
 ping-failed: "&cError: &4You cannot ping that person."
 
 # Formula: Normalised Ping =  Max ( Round ( Original Ping * Multiplier + Offset ), 0 )
-# Both parameters can be either floats or integers. Offset can be negative.
-ping-multiplier: 0.8
-ping-offset: 0
-ping-minimum: 0
+ping-multiplier: 0.8 # float or integer; non-negative
+ping-offset: 0 # float or integer; most likely 0 or negative
+ping-minimum: 0 # integer; non-negative
 
 ping-syntax: "&cSyntax: /ping [name]"
 reload-syntax: "&cSyntax: /pingreload"
