@@ -7,19 +7,23 @@
 # Example: "#e69296Your ping is #c8a2c8%ping% #e69296ms."
 
 # PlaceholderAPI Support
-# Use the placeholder "%slashping_ping%" on PAPI compatible plugins
+# Use the placeholder %slashping_ping% on PAPI-compatible plugins
 # to display normalised ping values.
 
 ping-self: "&6Your ping is &c%ping% &6ms."
 ping-others: "&c%name%&6's ping is &c%ping% &6ms."
 
-## This message is triggered when the target is offline or has the exempt permission.
+# This message is triggered when the target is offline
+# or has the exempt permission.
 ping-failed: "&cError: &4You cannot ping that person."
 
-# Formula: Normalised Ping =  Max ( Round ( Original Ping * Multiplier + Offset ), 0 )
+# Ping Normalisation Strategies
+# Result 1 = Original Value * Multiplier + Offset
+# Result 2 = Extract the integral part from Result 1
+# Normalised Value = Get the maximum of the 2: Result 2, Lower Bound
 ping-multiplier: 0.8 # float or integer; non-negative
 ping-offset: 0 # float or integer; most likely 0 or negative
-ping-minimum: 0 # integer; non-negative
+ping-minimum: 0 # integer; non-negative (a.k.a. Lower Bound)
 
 ping-syntax: "&cSyntax: /ping [name]"
 reload-syntax: "&cSyntax: /pingreload"
