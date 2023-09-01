@@ -22,7 +22,7 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 <hr>
 
 ### Major Highlights
-- EssentialsX-style default message preset.
+- Comes with EssentialsX-styled message preset.
 - Simple and lightweight with no unnecessary features other than /ping.
 - Highly configurable with built-in **HEX** colour support.
 - Enables modification of ping values with **multiplier** and **offset**.
