@@ -1,4 +1,4 @@
-<br><br>
+<p>
 
 <p align="center">
     <img src="https://i.imgur.com/Ydt6CmB.png"><br>
@@ -11,7 +11,8 @@
     <a href="https://github.com/denniemok/slash-ping/wiki">User Guide</a> •
     <a href="https://github.com/denniemok/slash-ping/issues">Issue Tracker</a>
 </p>
-<br>
+
+<p>
 
 <hr>
 
@@ -54,14 +55,15 @@ Example: `"#e69296Your ping is #c8a2c8%ping% #e69296ms."`<p>
 ### Runtime Requirements
 - Java 8 or above
 - Spigot 1.8 or above, or equivalent forks
-- Permission plugin, preferably LuckPerms or PermissionsEx
+- Permission plugin (Optional)
+- PlaceholderAPI (Optional)
 
 <hr>
 
 ### Build Dependencies
 - Java 8
-- Spigot API 1.8.8 R0.1
 - Spigot API 1.20.1 R0.1
+- PlaceholderAPI API 1.11.3
 
 <hr>
 
