@@ -1,4 +1,4 @@
-# SlashPing 1.0.5
+# SlashPing 1.0.6
 # https://www.spigotmc.org/resources/112371/
 # https://github.com/denniemok/slash-ping
 
@@ -15,6 +15,7 @@ ping-failed: "&cError: &4You cannot ping that person."
 # Both parameters can be either floats or integers. Offset can be negative.
 ping-multiplier: 0.8
 ping-offset: 0
+ping-minimum: 0
 
 ping-syntax: "&cSyntax: /ping [name]"
 reload-syntax: "&cSyntax: /pingreload"

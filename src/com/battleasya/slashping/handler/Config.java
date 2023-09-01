@@ -21,6 +21,8 @@ public class Config {
 
     public double pingOffset;
 
+    public int pingMinimum;
+
     public String pingSyntax;
 
     public String reloadSyntax;
@@ -44,6 +46,7 @@ public class Config {
 
         pingMultiplier = config.getDouble("ping-multiplier");
         pingOffset = config.getDouble("ping-offset");
+        pingMinimum = config.getInt("ping-minimum");
 
         pingSyntax = config.getString("ping-syntax");
         reloadSyntax = config.getString("reload-syntax");
