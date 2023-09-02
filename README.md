@@ -19,7 +19,7 @@
 ### Introduction
 This is a **lightweight** plugin with exactly one function: enables the checking of in-game ping with **/ping**. Nothing fancy or complicated is involved. What it does is only the simplest task you ever ask for, hence the performance and size. <p>
 
-Originally being part of [BattleAsya Utility](https://github.com/denniemok/battleasya-utility), now made separated and configurable.<p>
+Originally being part of [BattleAsya Utility](https://github.com/denniemok/battleasya-utility), now made available separately with configurability.
 
 <hr>
 
@@ -41,20 +41,20 @@ Ping in Java does not only take into account network latency but also server-int
 
 **Normalised Value = Max ( Round ( Original Value * Multiplier + Offset ), Lower Bound )**
 
-Round here means taking only the integral part from the intermediate result. Multiplier normalises the values by multiplication (default 0.8) while offset normalises by addition (default 0). The 2 parameters, together with the lower bound option, are made configurable in config.yml. <p>
+Round here means taking only the integral part from the intermediate result. Multiplier normalises the values by multiplication (default 0.8) while offset normalises by addition (default 0). The 2 parameters, together with the lower bound option, are made configurable in config.yml.
 
 ### 2. Closest Name Match
 
-Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match on the server based on the first few characters of a name on the server!<p>
+Users no longer have to type in the full name of a ping target because the plugin is clever enough to find the closest match on the server based on the first few characters of a name on the server!
 
 ### 3. HEX Colour Support
 
 This plugin supports the colouring of chat messages with HEX codes on 1.16+ servers.<br>
-Example: `"#e69296Your ping is #c8a2c8%ping% #e69296ms."`<p>
+Example: `"#e69296Your ping is #c8a2c8%ping% #e69296ms."`
 
 ### 4. PlaceholderAPI Support
 
-Use the placeholder **%slashping_ping%** in any PlaceholderAPI-compatible plugins (e.g., your favourite TAB plugin) to display the normalised ping values.<p>
+Use the placeholder **%slashping_ping%** in any PlaceholderAPI-compatible plugins (e.g., your favourite TAB plugin) to display the normalised ping values.
 
 <hr>
 
