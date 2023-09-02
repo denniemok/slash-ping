@@ -19,6 +19,8 @@
 ### Introduction
 This is a **lightweight** plugin with exactly one function: enables the checking of in-game ping with **/ping**. Nothing fancy or complicated is involved. What it does is only the simplest task you ever ask for, hence the performance and size. <p>
 
+Originally being part of [BattleAsya Utility](https://github.com/denniemok/battleasya-utility), now made separated and configurable.<p>
+
 <hr>
 
 ### Major Highlights
