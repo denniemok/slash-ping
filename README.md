@@ -35,7 +35,7 @@ This is a **lightweight** plugin with exactly one function: enables the checking
 
 ### 1. Ping Normalisation
 
-Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). Very often, you find yourself entering a 10 ms (from server list) server but end up getting 50 ms ping (with /ping) in-game. To account for this, a way to normalise the ping values before displaying them in chat (or elsewhere with PAPI) is provided.
+Ping in Java does not only take into account network latency but also server-internal latency (i.e., processing delay). Very often, you find yourself entering a 10 ms (from server list) server but end up getting 50 ms ping (with /ping) in-game. To combat this issue, a way to normalise the ping values before displaying them in chat (or elsewhere with PAPI) is provided.
 
 **Normalised Value = Max ( Round ( Original Value * Multiplier + Offset ), Lower Bound )**
 
