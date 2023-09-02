@@ -1,4 +1,4 @@
-<p><br>
+<br><br>
 
 <p align="center">
     <img src="https://i.imgur.com/Ydt6CmB.png"><br>
@@ -12,12 +12,12 @@
     <a href="https://github.com/denniemok/slash-ping/issues">Issue Tracker</a>
 </p>
 
-<p><br>
+<br>
 
 <hr>
 
 ### Introduction
-This is a **lightweight** plugin with exactly one function: enables the checking of in-game ping with **/ping**. Nothing fancy or complicated is involved. What it does is only the simplest task you ever ask for, hence the performance and size. <p>
+This is a **lightweight** plugin with exactly one function: enables the checking of in-game ping with **/ping**. Nothing fancy or complicated is involved. What it does is only the simplest task you ever ask for, hence the performance and size.
 
 Originally being part of [BattleAsya Utility](https://github.com/denniemok/battleasya-utility), now made available separately with enhanced configurability.
 
