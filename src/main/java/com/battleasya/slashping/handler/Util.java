@@ -31,7 +31,8 @@ public class Util {
             Matcher matcher = pattern.matcher(message);
 
             while (matcher.find()) {
-                String color = message.substring(matcher.start(), matcher.end());
+                // String color = message.substring(matcher.start(), matcher.end());
+                String color = matcher.group(0);
                 message = message.replace(color, ChatColor.of(color).toString());
                 matcher = pattern.matcher(message);
             }

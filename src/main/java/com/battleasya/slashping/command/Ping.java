@@ -44,7 +44,7 @@ public class Ping implements CommandExecutor {
                         , plugin.config.pingMinimum));
 
                 Util.sendMessage(sender, plugin.config.pingSelf
-                        .replaceAll("%ping%", ping));
+                        .replace("%ping%", ping));
 
             } else {
 
@@ -73,8 +73,8 @@ public class Ping implements CommandExecutor {
                             , plugin.config.pingMinimum));
 
                     Util.sendMessage(sender, plugin.config.pingOthers
-                            .replaceAll("%name%", playerName)
-                            .replaceAll("%ping%", ping));
+                            .replace("%name%", playerName)
+                            .replace("%ping%", ping));
 
                 } else {
 
