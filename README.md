@@ -2,7 +2,7 @@
 
 <p align="center">
     <img src="https://i.imgur.com/Ydt6CmB.png"><br>
-    <img src="https://img.shields.io/badge/Version-1.0.6-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
+    <img src="https://img.shields.io/badge/Version-1.0.7-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
 </p>
 
 <p align="center">
